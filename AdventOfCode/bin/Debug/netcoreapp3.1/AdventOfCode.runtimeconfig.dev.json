@@ -1,0 +1,9 @@
+{
+  "runtimeOptions": {
+    "additionalProbingPaths": [
+      "C:\\Users\\Stahu\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Stahu\\.nuget\\packages",
+      "X:\\VisualKURWADodatkiJEBANE\\NuGetPackages"
+    ]
+  }
+}
