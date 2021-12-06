@@ -54,7 +54,7 @@ namespace AdventOfCode
                         return (table, digit);
                 }
             }
-            return (table, 0);
+            return (table, -1);
         }
         static (Table, int) GetWinner(Data data)
         {
@@ -63,11 +63,11 @@ namespace AdventOfCode
                 foreach (var table in data.Tables)
                 {
                     (Table, int) CheckedTable = CheckForWin(table, item);
-                    if (CheckedTable.Item2 != 0)
+                    if (CheckedTable.Item2 != -1)
                         return CheckedTable;
                 }
             }
-            return (data.Tables[0], 0);
+            return (data.Tables[0], -1);
         }
         
         static (Table, int) GetLooser(Data data, int playersWonCounter = 0)
@@ -84,7 +84,7 @@ namespace AdventOfCode
                         continue;
                     }
                     (Table, int) CheckedTable = CheckForWin(table, item);
-                    if (CheckedTable.Item2 == 0)
+                    if (CheckedTable.Item2 == -1)
                     {
                         index++;
                         continue;
@@ -96,7 +96,7 @@ namespace AdventOfCode
                     index++;
                 }
             }
-            return (data.Tables[0], 0);
+            return (data.Tables[0], -1);
         }
         static int GetSum(Data data, bool winner)
         {
